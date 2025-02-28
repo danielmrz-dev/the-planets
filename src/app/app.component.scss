@@ -1,0 +1,16 @@
+@use "../scss/variables" as v;
+
+mat-drawer-content {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: v.$deep-space-blue;
+    min-height: calc(100vh - 69px);
+}
+
+.mat-drawer {
+    background-color: v.$deep-space-blue;
+    width: 100%;
+    padding: 1.5rem;
+}

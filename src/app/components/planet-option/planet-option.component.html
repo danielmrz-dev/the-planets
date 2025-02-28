@@ -1,0 +1,12 @@
+<ul class="planets"  [@staggingPlanets]="planets.length">
+    <li class="planets__option" *ngFor="let planet of planets">
+        <a class="planets__link">
+            <span 
+                class="planets__link-circle" 
+                [ngStyle]="{'background-color': planet.name.toLowerCase() | planetCircleColor }">
+            </span>
+            {{ planet.name }}
+            <img src="icon-chevron.svg">
+        </a>
+    </li>
+</ul>

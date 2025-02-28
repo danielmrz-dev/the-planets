@@ -1,1 +1,10 @@
-<h1>Planetas</h1>
+<app-header [drawer]="drawer"></app-header>
+
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+    <mat-drawer #drawer mode="over" position="end" opened>
+        <app-planet-option></app-planet-option>
+    </mat-drawer>
+    <mat-drawer-content>
+        
+    </mat-drawer-content>
+</mat-drawer-container>

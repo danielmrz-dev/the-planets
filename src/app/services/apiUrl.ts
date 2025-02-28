@@ -1,0 +1,1 @@
+export const apiUrl = "https://gist.githubusercontent.com/danielmrz-dev/2d64d690b5780875579ab8ed8b447105/raw/10c7fd18e0301da97cece64598e86332bb1ee2f6/gistfile1.txt"
