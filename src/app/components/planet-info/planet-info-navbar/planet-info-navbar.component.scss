@@ -1,0 +1,28 @@
+@use "../../../../scss/variables" as v;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid v.$dark-gray;
+    position: relative;
+    &__option {
+        color: v.$gray;
+        font-family: v.$Spartan;
+        font-weight: bold;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1.93px;
+        line-height: auto;
+        text-decoration: none;
+    }
+    &__border-bottom {
+        position: absolute;
+        bottom: 1px;
+        left: 6%;
+        width: 18%;
+        height: 4px;
+        background-color: v.$green;
+    }
+}

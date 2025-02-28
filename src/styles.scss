@@ -1,12 +1,6 @@
 @use "./scss/reset";
 @use "./scss/variables" as v;
 
-html,
-body {
-    height: 100%;
-}
 body {
     background-color: v.$deep-space-blue;
-    
-
 }

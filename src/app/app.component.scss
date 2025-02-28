@@ -4,9 +4,8 @@ mat-drawer-content {
     padding: 12px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     background-color: v.$deep-space-blue;
-    min-height: calc(100vh - 69px);
+    max-height: 88vh;
 }
 
 .mat-drawer {
