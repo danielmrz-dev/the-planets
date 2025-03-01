@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { PlanetsService } from '../../services/planets.service';
 import { IPlanet } from '../../interfaces/planet.interface';
 import { PlanetCircleColorPipe } from '../../pipes/planet-circle-color.pipe';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-planet-option',
   standalone: true,
-  imports: [CommonModule, PlanetCircleColorPipe],
+  imports: [CommonModule, PlanetCircleColorPipe, RouterLink],
   templateUrl: './planet-option.component.html',
   styleUrl: './planet-option.component.scss',
 })

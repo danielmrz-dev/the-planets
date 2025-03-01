@@ -8,7 +8,7 @@ import { PlanetInfoComponent } from "./components/planet-info/planet-info.compon
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, MatSidenavModule, PlanetOptionComponent, PlanetInfoComponent],
+  imports: [HeaderComponent, MatSidenavModule, PlanetOptionComponent, PlanetInfoComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

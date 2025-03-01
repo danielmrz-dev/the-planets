@@ -6,10 +6,10 @@
     gap: 20px;
     &__option {
         display: flex;
-        padding-bottom: 1.25rem;
         border-bottom: 1px solid v.$dark-gray;
     }
     &__link {
+        padding-bottom: 1.25rem;
         color: v.$white;
         display: flex;
         align-items: center;
@@ -21,6 +21,7 @@
         font-weight: bold;
         line-height: 1.5625rem;
         letter-spacing: 1.36px;
+        text-decoration: none;
         &-circle {
             display: inline-block;
             width: 20px;
