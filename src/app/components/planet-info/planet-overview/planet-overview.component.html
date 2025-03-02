@@ -1,0 +1,33 @@
+<section class="planet-info" *ngIf="currentPlanet$ | async as planet">
+    <img [src]="planet.images.planet" alt="" class="planet-info__image">
+    <div class="planet-info__text">
+        <h2 class="planet-info__title">{{ planet.name }}</h2>
+        <p class="planet-info__description">{{ planet.overview.content }}</p>
+        <a 
+            class="planet-info__source" 
+            target="_blank" 
+            noopener noreferrer 
+            [href]="planet.overview.source">
+            <span>Source: </span> <strong>Wikipedia </strong>
+            <img src="icon-source.svg" alt="" class="planet-info__source-icon">
+        </a>
+    </div>
+    <ul class="planet-info__card-list">
+        <li class="planet-info__card-item">
+            <span class="planet-info__card-item-title">Rotation Time</span>
+            <strong class="planet-info__card-item-data">{{ planet.rotation }}</strong>
+        </li>
+        <li class="planet-info__card-item">
+            <span class="planet-info__card-item-title">Revolution Time</span>
+            <strong class="planet-info__card-item-data">{{ planet.revolution }}</strong>
+        </li>
+        <li class="planet-info__card-item">
+            <span class="planet-info__card-item-title">Radius</span>
+            <strong class="planet-info__card-item-data">{{ planet.radius }}</strong>
+        </li>
+        <li class="planet-info__card-item">
+            <span class="planet-info__card-item-title">Average Temp.</span>
+            <strong class="planet-info__card-item-data">{{ planet.temperature }}</strong>
+        </li>
+    </ul>
+</section>

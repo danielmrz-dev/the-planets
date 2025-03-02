@@ -1,6 +1,6 @@
 <ul class="planets" >
     <li class="planets__option" *ngFor="let planet of planets">
-        <a class="planets__link" [routerLink]="[ 'planets', planet.name.toLowerCase()]">
+        <a class="planets__link" (click)="navigateToPlanet(planet.name)">
             <span 
                 class="planets__link-circle" 
                 [ngStyle]="{'background-color': planet.name.toLowerCase() | planetCircleColor }">
