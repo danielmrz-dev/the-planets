@@ -1,0 +1,24 @@
+@use "../../../../../scss/variables" as v;
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid v.$gray;
+    padding: .8rem 1.5rem;
+    &__title {
+        font-family: v.$Spartan;
+        font-size: .75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        opacity: .5;
+        line-height: 16px;
+        letter-spacing: 0.37px;
+    }
+    &__data {
+        font-family: v.$Antonio;
+        font-weight: normal;
+        font-size: 20px;
+        letter-spacing: -0.75px;
+    }
+}

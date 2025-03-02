@@ -21,12 +21,14 @@ export const routes: Routes = [
                 path: 'overview',
                 component: PlanetOverviewComponent
             },
-            // {
-            //     path: 'structure',
-            // },
-            // {
-            //     path: 'surface',
-            // },
+            {
+                path: 'structure',
+                component: PlanetOverviewComponent
+            },
+            {
+                path: 'surface',
+                component: PlanetOverviewComponent
+            },
         ]
     },
 

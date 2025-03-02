@@ -1,6 +1,5 @@
 <nav class="navbar">
-    <a routerLink="/" routerLinkActive="active" class="navbar__option">Overview</a>
-    <a routerLink="/" routerLinkActive="active" class="navbar__option">Structure</a>
-    <a routerLink="/" routerLinkActive="active" class="navbar__option">Surface</a>
-    <span class="navbar__border-bottom"></span>
+    <a routerLink="overview" routerLinkActive="active" [style.--active]="planet | planetCircleColor" class="navbar__option">Overview</a>
+    <a routerLink="structure" routerLinkActive="active" [style.--active]="planet | planetCircleColor" class="navbar__option">Structure</a>
+    <a routerLink="surface" routerLinkActive="active" [style.--active]="planet | planetCircleColor" class="navbar__option">Surface</a>
 </nav>

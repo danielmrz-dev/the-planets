@@ -1,7 +1,6 @@
 @use "../scss/variables" as v;
 
 mat-drawer-content {
-    padding: 12px;
     display: flex;
     flex-direction: column;
     background-color: v.$deep-space-blue;
