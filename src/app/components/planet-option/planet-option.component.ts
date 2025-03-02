@@ -1,25 +1,29 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { PlanetsService } from '../../services/planets.service';
 import { IPlanet } from '../../interfaces/planet.interface';
 import { PlanetCircleColorPipe } from '../../pipes/planet-circle-color.pipe';
-import { Router } from '@angular/router';
-import { MatDrawer } from '@angular/material/sidenav';
+import { ActivatedRoute, Event, Router, RouterLinkActive } from '@angular/router';
+import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-planet-option',
   standalone: true,
-  imports: [CommonModule, PlanetCircleColorPipe],
+  imports: [CommonModule, PlanetCircleColorPipe, RouterLinkActive],
   templateUrl: './planet-option.component.html',
   styleUrl: './planet-option.component.scss',
 })
 export class PlanetOptionComponent {
 
   planets: IPlanet[] = [];
+  currentPlanet: string = '';
+  @ViewChild(MatDrawer) matDrawer!: MatDrawer;
+
+  @Output() closeSideNav = new EventEmitter<void>();
   constructor(
     private readonly _planetsService: PlanetsService,
     private readonly router: Router,
-    private readonly drawer: MatDrawer
   ) {}
 
   ngOnInit(): void {
@@ -30,7 +34,8 @@ export class PlanetOptionComponent {
 
   navigateToPlanet(planetName: string): void {
     this.router.navigate(['planets', planetName.toLowerCase()]);
-    this.drawer.close();
+    this.currentPlanet = planetName;
+    this.closeSideNav.emit();
   }
 
 }

@@ -34,3 +34,32 @@
         }
     }
 }
+
+
+
+@media screen and (min-width: 768px) {
+    .planets {
+        flex-direction: row;
+        gap: 2.0625rem;
+        &__option {
+            display: flex;
+            border: none;
+        }
+        &__link {
+            padding-bottom: 0;
+            letter-spacing: 1px;
+            font-size: 11px;
+            opacity: .5;
+            &-circle {
+                display: none;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
+.active {
+    opacity: 1;
+}

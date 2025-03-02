@@ -2,7 +2,7 @@
 
 <mat-drawer-container class="example-container" [hasBackdrop]="false">
     <mat-drawer #drawer mode="over" position="end">
-        <app-planet-option></app-planet-option>
+        <app-planet-option (closeSideNav)="drawer.close()" ></app-planet-option>
     </mat-drawer>
     <mat-drawer-content>
         <router-outlet></router-outlet> 

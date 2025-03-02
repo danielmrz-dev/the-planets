@@ -1,6 +1,9 @@
 @use "../../../scss/variables" as v;
 
 .header {
+    app-planet-option {
+        display: none;
+    }
     color: v.$white;
     padding: 1rem 1.5rem;
     display: flex;
@@ -31,4 +34,19 @@
 
 .open {
     filter: brightness(30%);
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        app-planet-option {
+            display: block;
+        }
+        padding: 2rem 2rem 1.6875rem 2rem;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2.4375rem;
+        &__open-menu-btn {
+            display: none;
+        }
+    }
 }
