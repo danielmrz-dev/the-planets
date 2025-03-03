@@ -1,5 +1,5 @@
-import { Component, inject, Input } from '@angular/core';
-import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, Input } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { PlanetCircleColorPipe } from '../../../pipes/planet-circle-color.pipe';
 
 @Component({
@@ -10,13 +10,7 @@ import { PlanetCircleColorPipe } from '../../../pipes/planet-circle-color.pipe';
   styleUrl: './planet-info-navbar.component.scss'
 })
 export class PlanetInfoNavbarComponent {
-  planet: string = '';
 
-  private readonly activatedRoute = inject(ActivatedRoute);
+  @Input({ required: true }) planet: string = '';
 
-  ngOnInit(): void {
-    this.activatedRoute.paramMap.subscribe((params) => {
-      this.planet = params.get('planet') as string;
-    })
-  }
 }

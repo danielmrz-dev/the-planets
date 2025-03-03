@@ -7,10 +7,13 @@
     align-items: center;
     background: url(../../../../assets/background-stars.svg) center no-repeat;
     background-size: cover;
-    padding: 1.5rem;
+    color: v.$white;
+    app-planet-info-navbar {
+        width: 100%;
+    }
     &__image {
         width: 50%;
-        padding: 85px 0;
+        padding: 5.3125rem 1.5rem;
     }
     &__images {
         display: flex;
@@ -25,6 +28,7 @@
         }
     }
     &__text {
+        padding: 0 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,6 +65,7 @@
         }
     }
     &__card-list {
+        padding: 0 1.5rem;
         margin-top: 1.75rem;
         display: flex;
         flex-direction: column;
@@ -90,6 +95,93 @@
             letter-spacing: -0.75px;
         }
     }
-
-    color: v.$white;
 }
+
+@media screen and (min-width: 768px) {
+    .planet-info {
+        &__image {
+            max-width: 500px;
+            margin: auto;
+            padding: 85px 0;
+        }
+        &__images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            &-surface {
+                position: absolute;
+                width: 25%;
+                bottom: 30px;
+            }
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+        &__title {
+            font-family: v.$Antonio;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+        &__description {
+            font-family: v.$Spartan;
+            font-size: .875rem;
+            font-weight: 200;
+            opacity: .7;
+            line-height: 22px;
+            text-align: center;
+        }
+        &__source {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-family: v.$Spartan;
+            font-size: .9375rem;
+            font-weight: 200;
+            opacity: .7;
+            line-height: 25px;
+            text-align: center;
+            text-decoration: none;
+            color: v.$white;
+            strong {
+                text-decoration: underline;
+            }
+        }
+        &__card-list {
+            margin-top: 1.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            list-style-type: none;
+            width: 100%;
+        }
+        &__card-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid v.$gray;
+            padding: .8rem 1.5rem;
+            &-title {
+                font-family: v.$Spartan;
+                font-size: .75rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                opacity: .5;
+                line-height: 16px;
+                letter-spacing: 0.37px;
+            }
+            &-data {
+                font-family: v.$Antonio;
+                font-weight: normal;
+                font-size: 20px;
+                letter-spacing: -0.75px;
+            }
+        }
+    }
+}
+

@@ -1,15 +1,16 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { IPlanet } from '../../../interfaces/planet.interface';
 import { PlanetsService } from '../../../services/planets.service';
 import { PlanetOverviewCardComponent } from "./planet-overview-card/planet-overview-card.component";
+import { PlanetInfoNavbarComponent } from "../planet-info-navbar/planet-info-navbar.component";
 
 @Component({
   selector: 'app-planet-overview',
   standalone: true,
-  imports: [CommonModule, PlanetOverviewCardComponent],
+  imports: [CommonModule, PlanetOverviewCardComponent, PlanetInfoNavbarComponent],
   templateUrl: './planet-overview.component.html',
   styleUrl: './planet-overview.component.scss'
 })

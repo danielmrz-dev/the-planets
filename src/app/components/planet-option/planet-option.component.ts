@@ -3,14 +3,13 @@ import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
 import { PlanetsService } from '../../services/planets.service';
 import { IPlanet } from '../../interfaces/planet.interface';
 import { PlanetCircleColorPipe } from '../../pipes/planet-circle-color.pipe';
-import { ActivatedRoute, Event, Router, RouterLinkActive } from '@angular/router';
-import { MatDrawer, MatSidenav } from '@angular/material/sidenav';
-import { map } from 'rxjs';
+import { Router } from '@angular/router';
+import { MatDrawer } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-planet-option',
   standalone: true,
-  imports: [CommonModule, PlanetCircleColorPipe, RouterLinkActive],
+  imports: [CommonModule, PlanetCircleColorPipe],
   templateUrl: './planet-option.component.html',
   styleUrl: './planet-option.component.scss',
 })

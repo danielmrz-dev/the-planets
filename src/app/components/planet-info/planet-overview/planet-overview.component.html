@@ -1,4 +1,8 @@
+
+
+
 <section class="planet-info" *ngIf="currentPlanet$ | async as planet">
+    <app-planet-info-navbar [planet]="currentPlanetName"></app-planet-info-navbar> 
 
     <img *ngIf="currentRoute === 'overview'" [src]="planet.images.planet" alt="" class="planet-info__image">
 
