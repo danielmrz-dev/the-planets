@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid v.$gray;
+    border: 1px solid v.$dark-gray;
     padding: .8rem 1.5rem;
     &__title {
         font-family: v.$Spartan;
@@ -20,5 +20,44 @@
         font-weight: normal;
         font-size: 20px;
         letter-spacing: -0.75px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: .375rem;
+        &__title {
+            font-family: v.$Spartan;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            opacity: .5;
+            line-height: 16px;
+            letter-spacing: 0.37px;
+        }
+        &__data {
+            font-family: v.$Antonio;
+            font-weight: normal;
+            font-size: 24px;
+            letter-spacing: -0.75px;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card-item {
+        padding: 1.4375rem 1.25rem;
+        &__title {
+            font-size: .875rem;
+            line-height: 25px;
+            letter-spacing: 1px;
+        }
+        &__data {
+            font-size: 2.5rem;
+            letter-spacing: -1.5px;
+        }
     }
 }

@@ -50,3 +50,18 @@
         }
     }
 }
+
+@media screen and (min-width: 1440px) {
+    .header {
+        app-planet-option {
+            display: block;
+        }
+        flex-direction: row;
+        padding: 1.75rem 2.25rem;
+        justify-content: space-between;
+        gap: 2.4375rem;
+        &__open-menu-btn {
+            display: none;
+        }
+    }
+}
