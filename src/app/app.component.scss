@@ -4,7 +4,7 @@ mat-drawer-content {
     display: flex;
     flex-direction: column;
     background-color: v.$deep-space-blue;
-    max-height: 88vh;
+    min-height: 100vh;
 }
 
 .mat-drawer {
