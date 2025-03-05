@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Component, inject, Input } from '@angular/core';
+import { ActivatedRoute, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { PlanetCircleColorPipe } from '../../../pipes/planet-circle-color.pipe';
 
 @Component({
@@ -13,4 +13,12 @@ export class PlanetInfoNavbarComponent {
 
   @Input({ required: true }) planet: string = '';
 
+  private readonly router = inject(Router);
+  private readonly activatedRoute = inject(ActivatedRoute);
+
+  navigate(info: string) {
+    console.log(this.planet);
+    this.router.navigate(['/planets', this.planet, info]);
+    
+  }
 }

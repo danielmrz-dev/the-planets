@@ -37,7 +37,7 @@
         opacity: 1;
     }
     @media screen and (min-width: 768px) {
-        background-color: v.$ocean-blue;
+        background-color: var(--active, v.$ocean-blue);
     }
 }
 
